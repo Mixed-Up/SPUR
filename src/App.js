@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import facebook from './facebook.png';
 
 class App extends Component {
   constructor(props){
@@ -47,6 +48,8 @@ handle(event){
           </label>< br/>
           <input type="submit" value="Submit" className="btn btn-primary"/>
         </form>
+        <img src={facebook} />
+
         
       </div>
     );
