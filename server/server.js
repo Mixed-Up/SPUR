@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => res.send('Homepage'));
-app.post('/', (req, res) => res.json('Login Info'));
+// app.post('/', (req, res) => res.json('Login Info'));
 
 // app.get('/:username', (req,res) => Friends.findAll({})
 //     .then((friend) => {
