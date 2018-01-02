@@ -14,7 +14,7 @@ if(ChoreSchema) {
     choreSchemaArray.push(ChoreSchema);
 }
 
-const ChallengeSchema = new Schema({
+let ChallengeSchema = new Schema({
     username: [
         {
             type: Schema.Types.ObjectId,
