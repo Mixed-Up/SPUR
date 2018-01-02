@@ -33,11 +33,18 @@ const ChallengeSchema = new Schema({
             ref: 'User'
         }
     ],
-    choreSchemaArray// Array to store list of challenges 
+    unpackChores(choreSchemaArray)// Array to store list of challenges 
 });
 
+const unpackChores = (...choreSchemaArray) => {
+    for(let chore in choreSchemaArray) {
+        ChallengeSchema += chore;
+    }
+};
 
+const Chore = mongoose.model('Chore', ChallengeSchema);
 
+module.exports = Chore;
 // class Chore {
 //     constructor(username, challenger, challengerPic, choreArray, pts, {message, prizeUrl, prizeName, prizePic} = {}) {
 //         this.username = username;
