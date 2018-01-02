@@ -4,6 +4,17 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ChoreSchema = new Schema({
+    choreInput: String,
+    chorePts: String,
+}); // on Create Store into array
+
+let choreSchemaArray = [];
+
+if(ChoreSchema) {
+    choreSchemaArray.push(ChoreSchema);
+}
+
+const ChallengeSchema = new Schema({
     username: [
         {
             type: Schema.Types.ObjectId,
@@ -22,12 +33,8 @@ const ChoreSchema = new Schema({
             ref: 'User'
         }
     ],
-    challengeArray: [], // Area to store list of challenges 
+    choreSchemaArray// Array to store list of challenges 
 });
-
-
-
-
 
 
 
