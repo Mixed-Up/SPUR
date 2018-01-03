@@ -1,0 +1,18 @@
+
+.jumbotron {
+	text-align: center;
+	background-image: url("");
+	border-bottom-width: 2px;
+}
+
+.panel {
+	background-image: url("");
+	border-style: ridge;
+	border-color: darkgray;
+	border-width:2px;
+
+}
+
+body {
+	background-image: url("");
+}
