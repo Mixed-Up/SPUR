@@ -1,7 +1,7 @@
 //addditem
-
+import { FlexContainer, FlexChild } from 'react-boxes/flex'
 import React, { Component } from 'react';
-
+import CSS from '../index.css';
 
 class Dashboard extends Component {
 constructor(props){
@@ -26,12 +26,32 @@ handle(event){
     this.props.history.push('/');
 }
 
+
 render() {
     return (
       <div className="container">
+          
+         
+         idk what this is suppose to doooooooooo
+         <div className="Left">  fgkfgj </div>
+         <div className="Middle">  gfg </div>
+            
+         <div className="Right">  fgfh </div>
+            
+            
+      
+ 
+
+
+
+
+
+
+
+      
         <form onSubmit={this.handle}>
           <label>
-            Add Item:
+            
             <input type="text" value={this.state.value} onChange={this.change} className="form-control"/>
           </label><br/>
           <input type="submit" value="Submit" className="btn btn-primary"/>
