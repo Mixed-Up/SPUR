@@ -18,6 +18,14 @@ const app = express();
 
 const router = express.Router();
 
+// Import Mongoose connection
+var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
+// Local Strategy for Passport
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+
 app.use(express.static('public'));
 // app.use(express.static('src'));
 app.use(morgan);
