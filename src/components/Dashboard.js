@@ -1,7 +1,7 @@
 //addditem
 
 import React, { Component } from 'react';
-import addItem from './ItemService';
+
 
 class Dashboard extends Component {
 constructor(props){
