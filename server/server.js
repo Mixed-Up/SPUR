@@ -1,7 +1,6 @@
 //jshint esversion: 6
 const bodyParser = require('body-parser');
 const express = require('express');
-const mongoose = require('mongoose');
 const morgan = require('morgan');
 
 // Models
@@ -32,6 +31,21 @@ app.use(express.static('public'));
 app.use(morgan);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// Initialize Passport and Express-Session
+app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+  }));
+app.use(passport.initialize());
+app.use(passport.session());
+  
+// Create User local strategy and serialize/deserialize user via Passport
+var User = require('./models/User');
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 //Homepage Route
 app.get('/', (req, res) => res.send('Homepage'));
