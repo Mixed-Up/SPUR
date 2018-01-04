@@ -1,3 +1,4 @@
+//jshint esversion: 6
 const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -54,6 +55,8 @@ console.log('Homepage');
 // app.get('/:username/create-task', (req, res) => res.send('CreateTask'));
 // app.post('/:username/create-task', (req, res) => res.json(NewChallenge));
 
-mongoose.connect('mongodb://localhost/spur');
+mongoose.connect('mongodb://localhost/spur')
+  .then(() =>  console.log('connection succesful'))
+  .catch((err) => console.error(err));
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}`));
