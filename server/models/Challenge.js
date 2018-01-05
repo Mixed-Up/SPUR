@@ -7,6 +7,11 @@ const Schema = mongoose.Schema;
 let ChallengeSchema = new Schema({
     username:{type: Schema.Types.ObjectId, ref: 'User'},
     challenger: {type: Schema.Types.ObjectId, ref: 'User'},
+    friend_ids: [
+        {
+            type: String
+        }
+    ],
     chores: [
         {
             type: Schema.Types.ObjectId,
