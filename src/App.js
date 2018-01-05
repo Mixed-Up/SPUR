@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import facebook from './facebook.png';
+import { Jumbotron, Button } from 'reactstrap';
+//
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+
+import AppBar from 'material-ui/AppBar';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
+
+
 
 class App extends Component {
   constructor(props){
@@ -12,6 +24,7 @@ class App extends Component {
     this.change = this.change.bind(this);
     this.handle = this.handle.bind(this);//dashboard.handle 
 }
+
 
 //functions
 change(event){
@@ -26,34 +39,52 @@ handle(event){
     this.props.history.push('/');
 }
 
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">everybody loves chores</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
 
-        <form onSubmit={this.handle}>
-          <label>
-            Username:
-            
-            <input type="text" value={this.state.value} onChange={this.change} className="form-control"/>
-          </label><br/>
-          <label> Password:
-          <input type="text" value={this.state.value} onChange={this.change} className="form-control"/>
-          </label>< br/>
-          <input type="submit" value="Submit" className="btn btn-primary"/>
-        </form>
-        <img src={facebook} />
 
-        
+      <Jumbotron>
+        <h1 className="display-3">Hello, world!</h1>
+        <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr className="my-2" />
+        <p>It uses utility classes for typgraphy and spacing to space content out within the larger container.</p>
+        <p className="lead"> </p>
+      </Jumbotron>
+      <MuiThemeProvider>
+          
+          <AppBar
+             title="Login"
+           />
+           
+           <TextField
+             hintText="Enter your Username"
+             floatingLabelText="Username"
+             onChange = {(event,newValue) => this.setState({username:newValue})}
+             />
+           <br/>
+             <TextField
+               type="password"
+               hintText="Enter your Password"
+               floatingLabelText="Password"
+               onChange = {(event,newValue) => this.setState({password:newValue})}
+               />
+             <br/>
+             <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
+           
+         
+         
+         </MuiThemeProvider>
+                
+
       </div>
+      
     );
   }
+  
 }
 
+const style = {
+  margin: 15,}
 export default App;

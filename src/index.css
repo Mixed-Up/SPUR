@@ -2,13 +2,71 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: red;
-  margin: 200px;
+  background-color: rgb(117, 114, 114);
+  margin: 20px;
 }
 
-.div {
-  margin: 40px;
-  border-color: rgb(32, 1, 1);
+/* div {
+border-color: rgb(32, 1, 1);
 border-style: solid;
-border-width: 25px;
+border-width: 2px;
+} */
+
+.container{
+  border-color: rgb(68, 9, 177);
+  border-style: solid;
+  border-width: 2px;
+  margin: 20px;
 }
+
+.battle {
+  border-color: rgb(7, 3, 4);
+  border-style: solid;
+  border-width: 2px;
+  margin: 20px;
+
+}
+
+.score {
+  border-color: rgb(219, 200, 204);
+  border-style: solid;
+  border-width: 2px;
+  margin: 20px;
+
+}
+
+.challenges {
+  border-color: rgb(54, 43, 46);
+  border-style: solid;
+  border-width: 2px;
+  margin: 20px;
+
+}
+
+
+.battleI {
+  border-color: rgb(247, 233, 237);
+  border-style: solid;
+  border-width: 2px;
+  margin: 20px;
+
+}
+
+.scoreI {
+  border-color: rgb(219, 200, 204);
+  border-style: dotted;
+  border-width: 2px;
+  margin: 20px;
+
+}
+
+.challengesI {
+  border-color: rgb(223, 217, 219);
+  border-style: solid;
+  border-width: 2px;
+  margin: 20px;
+
+}
+
+
+
