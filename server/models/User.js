@@ -27,15 +27,17 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    friend_ids: [
+        {
+            type: String
+        }
+    ],
     challenges: [
         {
             type: Scehma.Types.ObjectId,
             ref: "Challenge"
         }
-    ],
-    friend_ids: {
-        type: String
-    }
+    ]
 });
 
 UserSchema.plugin(passportLocalMongoose);
