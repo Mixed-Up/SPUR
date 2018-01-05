@@ -26,7 +26,8 @@ const UserSchema = new Schema({
     userCreated: {
         type: Date,
         default: Date.now
-    }
+    },
+    chores: {}
 });
 
 UserSchema.plugin(passportLocalMongoose);

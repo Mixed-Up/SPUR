@@ -46,7 +46,8 @@ const Chore = mongoose.model('Chore', ChallengeSchema);
 
 module.exports = Chore;
 // class Chore {
-//     constructor(username, challenger, challengerPic, choreArray, pts, {message, prizeUrl, prizeName, prizePic} = {}) {
+//     constructor(choreName, username, challenger, challengerPic, choreArray, pts, {message, prizeUrl, prizeName, prizePic} = {}) {
+//         this.choreName = choreName    
 //         this.username = username;
 //         this.challenger = challenger;
 //         this.challengerPic = challengerPic;
