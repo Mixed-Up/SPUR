@@ -31,7 +31,7 @@ change(event){
     this.setState({ value: event.target.value});
 }
 
-handle(event){
+handleClick(event){
     event.preventDefault();
     this.setState({ value: event.target.value});
     
