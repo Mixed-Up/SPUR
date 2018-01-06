@@ -1,14 +1,16 @@
 //jshint esversion: 6
-import User from '../models/User'
-import Chore from '../models/Chore'
+import User from '../models/User';
+import Chore from '../models/Chore';
 import { Mongoose } from "mongoose";
+var db = Mongoose.connection;
+var dbCollection = db.collections;
 
-
+let choreController = {};
 // use chore object within User model to nest the newly created chore each time
 
 //const Chore = new Chore();
 
-User.createChore = (req, res) => {
+choreController.createChore = (req, res) => {
     new Chore({
         choreInput: req.body.choreInput,
         chorePts: req.body.chorePts
@@ -18,7 +20,7 @@ User.createChore = (req, res) => {
             res.redirect('/dashboard');
             throw err;
         }
-        dbCollections.User.Challenge.input(chore);
+        dbCollection.Chore.input(chore);
         res.redirect('/dashboard');
     }
 };
