@@ -29,12 +29,13 @@ const UserSchema = new Schema({
     },
     friend_ids: [
         {
-            type: String
+            type: Schema.Types.ObjectId,
+            ref: "User"
         }
     ],
     challenges: [
         {
-            type: Scehma.Types.ObjectId,
+            type: Schema.Types.ObjectId,
             ref: "Challenge"
         }
     ]
