@@ -1,1 +1,0 @@
-export FACEBOOK_APP_SECRET=yoursecrethere

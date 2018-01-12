@@ -19,6 +19,7 @@ ReactDOM.render(
           <Route path='/dashboard' component= {Dashboard} />
           <Route path='/challenges' component= {Challenges} />
           <Route path='/ok' component= {Ok} />
+          <Route path='/login' component={<div>LOGIN</div>} />
         </div>
     </Router>,
     document.getElementById('root')
