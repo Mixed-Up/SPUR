@@ -22,7 +22,7 @@ class App extends Component {
    //this.addItem = new ItemService();
 
     this.change = this.change.bind(this);
-    this.handle = this.handle.bind(this);//dashboard.handle 
+    this.handleClick = this.handleClick.bind(this);//dashboard.handle 
 }
 
 
